@@ -7,7 +7,7 @@ const nakedClan = document.querySelector('h1');
 
 function generateStars(){
 
-  const space = document.querySelector('.container-1');
+  const space = document.querySelector('.space');
   const stars = document.createElement('div');
 
   let size = Math.random() * 3;
