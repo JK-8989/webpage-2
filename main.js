@@ -1,15 +1,21 @@
+const nakedClan = document.querySelector('h1');
+
+
+
+
 
 
 function generateStars(){
+
   const space = document.querySelector('.container-1');
   const stars = document.createElement('div');
 
-  let size = Math.random()*3;
+  let size = Math.random() * 3;
   console.log(size);
 
   stars.style.width = size + 'px';
   stars.style.height = size + 'px';
-  // stars.style.borderRadius = '50%';
+  stars.style.borderRadius = '50%';
   stars.style.background = 'white';
   stars.style.boxShadow = '0 0 15px white, 0 0 15px white';
   stars.style.position= 'absolute';
