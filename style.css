@@ -1,6 +1,7 @@
 :root {
   --font_color_1: rgb(186, 186, 186);
   --font_color_2: rgb(75, 75, 75);
+  --font_color_3: rgb(122, 122, 122);
   --bg_space: radial-gradient(ellipse at bottom, #132b44 0%, #090A0F 100%);
   --bg_earth: rgb(0, 0, 0);
 }
@@ -24,6 +25,7 @@ body{
   top: -250px;
   width: 3.5em;
   opacity: 0.5;
+  color: var(--font_color_2);
 }
 .space #nakedclan {
   margin: 3em 0 0 0;
@@ -54,7 +56,7 @@ body{
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 9em;
+  height: 6em;
   background: var(--bg_earth);
   z-index: 10;
   border-radius: 50% 50% 0 0/ 100% 100% 0 0; 
@@ -67,24 +69,38 @@ main {
   background: var(--bg_earth);
   width: 100vw;
 }
+main .sec-1 {
+  font-size: 0.5em;
+  margin: 0 0 2em 1em;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: var(--font_color_3);
+  filter: drop-shadow(0 0 0.5em #fff);
+  margin-left: 0;
+}
 main #content {
   background: var(--bg_earth);
   max-width: 90%;
   margin: 0 auto;
-  width: 1200px;
+  width: 900px;
+  height: auto;
   overflow: hidden;
 }
 main .text {
+  height: auto;
   text-align: justify;
   color: var(--font_color_2);
+  padding: 1em;
 }
-main .text h1 {
+main .text p:nth-child(1) {
+  margin: 3em 0 1em 0 ;
   font-size: 1em;
 }
 main .text p {
   font-size: 0.7em;
+  margin: 0 0 0 0;
+  line-height: 1.5;
 }
-
 
 
 /* === slider styling */
@@ -110,7 +126,7 @@ main .text p {
 /* === slider animation */
 .top-row {
   transform: translateX(0);
-  animation: slideshow-1 40s linear infinite;
+  animation: slideshow-1 60s linear infinite;
 }
 @keyframes slideshow-1 {
   0% {
@@ -126,7 +142,7 @@ main .text p {
 
 .bottom-row {
   transform: translateX(0);
-  animation: slideshow-2 40s linear infinite;
+  animation: slideshow-2 60s linear infinite;
 }
 @keyframes slideshow-2 {
   0% {
@@ -144,7 +160,7 @@ main .text p {
 .slider::before,
 .slider::after {
   content:'';
-  width: 3em;
+  width: 5em;
   height: 12em;
   position: absolute;
   z-index: 2;
