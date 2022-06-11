@@ -83,16 +83,6 @@ main .text h1 {
 main .text p {
   font-size: 0.7em;
 }
-.collection img {
-  width: 5em;
-  vertical-align: top;
-  margin: 0.5em;  
-  opacity: 0.8;
-  border-radius: 0.5em;
-}  
-.slider {
-  margin: 2em 0;
-}
 /* .slider::before,
 .slider::after {
   content: '';
@@ -104,39 +94,71 @@ main .text p {
   position: absolute;
   z-index: 2;
 } */
+
+
+/* slide effect */
+.collection img {
+  width: 5em;
+  vertical-align: top;
+  margin: 0.5em;  
+  opacity: 0.8;
+  border-radius: 0.5em;
+}  
+.slider {
+  margin: 2em 0;
+}
 .slider .top-row,
 .slider .bottom-row {
   display: flex;
   place-content: center;
   position: relative;
 }
-.slider .top-row,
-.slider .bottom-row {
-  opacity: 0;
-  transition: all 1s ease-in;
-}
-.slider .top-row:hover,
-.slider .bottom-row:hover {
-  opacity: 1;
-}
-
 /* .top-row {
-  animation: slide-to-right 90s linear infinite;
+  transform: translateX(0);
+  transition: all 5s ease-in;
 }
 .bottom-row {
-  animation: slide-to-left 90s linear infinite;
+  transform: translateX(0);
+  transition: all 5s ease-in;
+} 
+.top-row:hover {
+  transform: translateX(50%);
+}
+.bottom-row:hover {
+  transform: translateX(-50%);
 } */
-/* @keyframes slide-to-right { 
-    0% {transform: translateX(0)}
-    50% {transform: translateX(50%)}
-    100% {transform: translateX(0)}
-  }
-@keyframes slide-to-left { 
-  0% {right: 0%;}
-  50% {right: 50%;}
-  100% {right: 0%}
-  } */
 
+.top-row {
+  transform: translateX(0);
+  animation: slideshow-1 40s linear infinite;
+}
+@keyframes slideshow-1 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bottom-row {
+  transform: translateX(0);
+  animation: slideshow-2 40s linear infinite;
+}
+@keyframes slideshow-2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 
 
