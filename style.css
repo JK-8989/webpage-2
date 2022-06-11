@@ -3,16 +3,35 @@
   --font_color_2: rgb(75, 75, 75);
   --font_color_3: rgb(122, 122, 122);
   --font-accent: rgb(127, 219, 255);
+
   --bg_space: radial-gradient(ellipse at bottom, #132b44 0%, #090A0F 100%);
   --bg_earth: rgb(0, 0, 0);
 }
 body{
   margin: 0;
   padding: 0;
-  font-size: 2rem;
+  font-size: 2rem; 
+  color: var(--font_color_3); 
 }
-p {
-  color: var(--font_color_3); /**/
+/* p {
+  color: var(--font_color_3); 
+} */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  /* color: #ddd; */
+  font-size: 0.6em;
+}
+nav {
+  color: #ddd;
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 .space {
   position: relative;
@@ -22,6 +41,7 @@ p {
   text-align: center;
   letter-spacing: 2px;
   overflow: hidden;
+  z-index: 0;
 }
 .space .moon {
   position: relative;
@@ -29,17 +49,15 @@ p {
   top: -280px;
   width: 3.5em;
   opacity: 0.5;
-  color: var(--font_color_2);
 }
 .space #nakedclan {
   margin: 3em 0 0 0;
   font-size: 2.5em;
-  color: var(--font_color_1);
 }
 .space #nft {
   font-size: 0.5em;
 }
-#nakedclan, #nft {
+.space #nakedclan, #nft {
   background: linear-gradient(rgb(255, 255, 255), rgb(34, 39, 59));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -82,7 +100,7 @@ main .sec-1 {
   filter: drop-shadow(0 0 0.5em #fff);
   margin-left: 0;
 }
-main #content {
+main #content-1 {
   background: var(--bg_earth);
   max-width: 90%;
   margin: 0 auto;
@@ -110,9 +128,9 @@ main .text p:nth-child(1), .sec-4 p, .sec-5 p {
   color: grey;
 }
 .sec-4, .sec-5 {
-  height: 10em;
+  height: 10em;z
 }
-.sec-5 {
+main #content-2{
   background: linear-gradient(to bottom, black, rgb(85, 85, 85));
 }
 
@@ -175,7 +193,7 @@ main .text p:nth-child(1), .sec-4 p, .sec-5 p {
 .slider::before,
 .slider::after {
   content:'';
-  width: 5em;
+  width: 3em;
   height: 12em;
   position: absolute;
   z-index: 2;
