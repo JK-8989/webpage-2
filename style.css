@@ -2,6 +2,7 @@
   --font_color_1: rgb(186, 186, 186);
   --font_color_2: rgb(75, 75, 75);
   --font_color_3: rgb(122, 122, 122);
+  --font-accent: rgb(127, 219, 255);
   --bg_space: radial-gradient(ellipse at bottom, #132b44 0%, #090A0F 100%);
   --bg_earth: rgb(0, 0, 0);
 }
@@ -9,6 +10,9 @@ body{
   margin: 0;
   padding: 0;
   font-size: 2rem;
+}
+p {
+  color: var(--font_color_3); /**/
 }
 .space {
   position: relative;
@@ -22,7 +26,7 @@ body{
 .space .moon {
   position: relative;
   left: 250px;
-  top: -250px;
+  top: -280px;
   width: 3.5em;
   opacity: 0.5;
   color: var(--font_color_2);
@@ -92,15 +96,26 @@ main .text {
   color: var(--font_color_2);
   padding: 1em;
 }
-main .text p:nth-child(1) {
-  margin: 3em 0 1em 0 ;
-  font-size: 1em;
-}
 main .text p {
   font-size: 0.7em;
-  margin: 0 0 0 0;
   line-height: 1.5;
 }
+main .text p:nth-child(1), .sec-4 p, .sec-5 p {
+  margin: 3em 0 1em 0 ;
+  font-size: 0.7em;
+  text-align: center;
+  color: var(--font-accent);
+}
+.sec-4 p:nth-child(2), .sec-5 p:nth-child(2) {
+  color: grey;
+}
+.sec-4, .sec-5 {
+  height: 10em;
+}
+.sec-5 {
+  background: linear-gradient(to bottom, black, rgb(85, 85, 85));
+}
+
 
 
 /* === slider styling */
@@ -112,7 +127,7 @@ main .text p {
   border-radius: 0.5em;
 }  
 .slider {
-  margin: 2em 0;
+  height: 16em;  /* === slider height*/
   position: relative;
   z-index: 0;
 }
