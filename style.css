@@ -23,11 +23,11 @@ body{
   left: 250px;
   top: -250px;
   width: 3.5em;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 .space #nakedclan {
-  margin: 4em 0 0 0;
-  font-size: 2em;
+  margin: 3em 0 0 0;
+  font-size: 2.5em;
   color: var(--font_color_1);
 }
 .space #nft {
@@ -44,6 +44,10 @@ body{
   color: var(--font_color_1);
   font-size: 0.5em;
 }
+.space p:nth-child(2) {
+  opacity: 0.5;
+}
+
 .space::after { /* ===== Earth curve */
   position: absolute;
   content: '';
@@ -58,9 +62,6 @@ body{
               0px -40px 39px -21px rgba(116, 167, 255, 0.152),
               inset 0px 28px 36px -30px rgba(127, 212, 255, 0.6);
   transform: scale(1.3);
-}
-h1 {
-  margin-top: 0;
 }
 main {
   background: var(--bg_earth);
@@ -83,20 +84,10 @@ main .text h1 {
 main .text p {
   font-size: 0.7em;
 }
-/* .slider::before,
-.slider::after {
-  content: '';
-  top: 0;
-  left: 0;
-  width: 5em;
-  height: 12em;
-  color: red;
-  position: absolute;
-  z-index: 2;
-} */
 
 
-/* slide effect */
+
+/* === slider styling */
 .collection img {
   width: 5em;
   vertical-align: top;
@@ -106,6 +97,8 @@ main .text p {
 }  
 .slider {
   margin: 2em 0;
+  position: relative;
+  z-index: 0;
 }
 .slider .top-row,
 .slider .bottom-row {
@@ -113,21 +106,8 @@ main .text p {
   place-content: center;
   position: relative;
 }
-/* .top-row {
-  transform: translateX(0);
-  transition: all 5s ease-in;
-}
-.bottom-row {
-  transform: translateX(0);
-  transition: all 5s ease-in;
-} 
-.top-row:hover {
-  transform: translateX(50%);
-}
-.bottom-row:hover {
-  transform: translateX(-50%);
-} */
 
+/* === slider animation */
 .top-row {
   transform: translateX(0);
   animation: slideshow-1 40s linear infinite;
@@ -160,5 +140,24 @@ main .text p {
   }
 }
 
+/* === slider shadow */
+.slider::before,
+.slider::after {
+  content:'';
+  width: 3em;
+  height: 12em;
+  position: absolute;
+  z-index: 2;
+}
+.slider::before {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+}
+.slider::after {
+  top: 0;
+  right: 0;
+  background: linear-gradient(to left, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+}
 
 
